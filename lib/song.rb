@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song 
   attr_accessor :name, :artist, :genre 
   
@@ -18,12 +20,13 @@ class Song
     @@count
   end 
   
-  def self.genres
-    @@count
+  def self.artists(artist_name)
+    if !@@artists.include?(artist_name)
+      @@artists << artist_name
   end 
   
-  def self.artists
-    if @@artists
+  def self.genres
+    @@genres
   end 
   
   def self.genre_count
@@ -33,5 +36,4 @@ class Song
   def self.artists_count 
     @@artists_count
   end 
-
 end 
