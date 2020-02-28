@@ -21,6 +21,7 @@ class Song
   end 
   
   def self.artists(artist_name)
+    binding.pry 
     if !@@artists.include?(artist_name)
       @@artists << artist_name
   end 
